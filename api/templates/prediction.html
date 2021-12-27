@@ -5,16 +5,38 @@
 
 <form method="post">
     <div class="form-group">
-        <label for="feature1">feature1</label>
-        <input type="text" name="feature1"
-               placeholder="feature1 value" class="form-control"
-               value="{{ request.form['feature1'] }}"></input>
+        <label for="APM">APM</label>
+        <input type="text" name="APM"
+               placeholder="ex: 143.7180" class="form-control"
+               value="{{ request.form['APM'] }}"></input>
     </div>
 
     <div class="form-group">
-        <label for="feature2">feature2</label>
-        <textarea name="feature2" placeholder="feature2 value"
-                  class="form-control">{{ request.form['feature2'] }}</textarea>
+        <label for="SelectByHotkeys">SelectByHotkeys</label>
+        <input type="text" name="SelectByHotkeys"
+               placeholder="ex: 0.003515" class="form-control"
+               value="{{ request.form['SelectByHotkeys'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="AssignToHotkeys">AssignToHotkeys</label>
+        <input type="text" name="AssignToHotkeys"
+               placeholder="ex: 0.000220" class="form-control"
+               value="{{ request.form['AssignToHotkeys'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="ActionLatency">ActionLatency</label>
+        <input type="text" name="ActionLatency"
+               placeholder="ex: 40.8673" class="form-control"
+               value="{{ request.form['ActionLatency'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="GapBetweenPACs">GapBetweenPACs</label>
+        <input type="text" name="GapBetweenPACs"
+               placeholder="ex: 32.6677" class="form-control"
+               value="{{ request.form['GapBetweenPACs'] }}"></input>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Predict</button>

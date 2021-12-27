@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, flash, url_for, redirect
 
+from models import preprocessing, model_important_features
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'key'
 
@@ -18,16 +20,24 @@ def index():
 @app.route('/prediction', methods=('GET', 'POST'))
 def prediction():
     if request.method == 'POST':
-        feature1 = request.form['feature1']
-        feature2 = request.form['feature2']
 
-        if not feature1:
-            flash('feature1 is required !')
-        elif not feature2:
-            flash('feature2 is required !')
+        APM = float(request.form['APM'])
+        SelectByHotkeys = float(request.form['SelectByHotkeys'])
+        AssignToHotkeys = float(request.form['AssignToHotkeys'])
+        ActionLatency = float(request.form['ActionLatency'])
+        GapBetweenPACs = float(request.form['GapBetweenPACs'])
+
+        input = [APM, SelectByHotkeys, AssignToHotkeys, ActionLatency, GapBetweenPACs]
+
+        if not APM:
+            flash('APM is required !')
         else:
-            print(f'Title : {feature1}')
-            print(f'Content : {feature2}')
+            print(f'APM : {APM, type(APM), type(float(APM))}')
+            
+            data = preprocessing()
+            pred, score = model_important_features(data, input)
+            print(f'You have been predicted {pred} with a precision of {score}%')
+            
             return redirect(url_for('index'))
 
     return render_template('prediction.html')

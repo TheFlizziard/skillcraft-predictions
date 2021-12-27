@@ -1,1 +1,3 @@
 api/__pycache__/app.cpython-39.pyc
+api/templates/prediction.html
+.gitignore
