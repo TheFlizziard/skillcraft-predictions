@@ -26,7 +26,6 @@ def prediction():
         AssignToHotkeys = float(request.form['AssignToHotkeys'])
         ActionLatency = float(request.form['ActionLatency'])
         GapBetweenPACs = float(request.form['GapBetweenPACs'])
-
         input = [APM, SelectByHotkeys, AssignToHotkeys, ActionLatency, GapBetweenPACs]
 
         if not APM:
@@ -35,7 +34,9 @@ def prediction():
             print(f'APM : {APM, type(APM), type(float(APM))}')
             
             data = preprocessing()
+            print("preprocessing done")
             pred, score = model_important_features(data, input)
+            print("pred done")
             print(f'You have been predicted {pred} with a precision of {score}%')
             
             return redirect(url_for('index'))

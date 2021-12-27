@@ -5,7 +5,7 @@ import sklearn as sk
 from sklearn.ensemble import RandomForestClassifier
 
 def preprocessing():
-    data = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/00272/SkillCraft1_Dataset.csv")
+    data = pd.read_csv("SkillCraft1_Dataset.csv")
     
     league_names = {1 : 'Bronze', 2 : 'Silver', 3 : 'Gold', 4 : 'Platinum',
                 5 : 'Diamond', 6 : 'Master', 7 : 'GrandMaster', 8 : 'Professional'}
@@ -49,7 +49,7 @@ def apply_model(X, Y, input):
 def model_important_features(data, input):
 
     imp_features = ['APM', 'SelectByHotkeys', 'AssignToHotkeys', 'ActionLatency', 'GapBetweenPACs']
-    input_df = pd.DataFrame(dict(zip(imp_features, input)))
+    input_df = pd.DataFrame(dict(zip(imp_features, input)), index=[0])
 
     X = data[imp_features]
     Y = data['LeagueName']
