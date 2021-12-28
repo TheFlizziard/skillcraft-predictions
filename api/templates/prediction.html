@@ -5,6 +5,25 @@
 
 <form method="post">
 
+    <!--Radio buttons for selecting features (important features only or all features)-->
+    <div>
+        <input type="radio" id="imp_features" name="features" value="imp_features" checked>
+        <label for="imp_features">Model on important features only</label>
+    </div>
+    <div>
+        <input type="radio" id="all_features" name="features" value="all_features">
+        <label for="all_features">Model on all features</label>
+    </div>
+    <!--Radio buttons for selecting the prediction type (rank prediction or group prediction)-->
+    <div>
+        <input type="radio" id="rank" name="rank" value="rank" checked>
+        <label for="rank">Model predicting ranks</label>
+    </div>
+    <div>
+        <input type="radio" id="group" name="rank" value="group">
+        <label for="group">Model predicting groups</label>
+    </div>
+    <!--Formulaire for collecting the user input data-->
     <div class="form-group">
         <label for="APM">APM</label>
         <input type="text" name="APM"
@@ -35,7 +54,7 @@
                placeholder="ex: 32.6677" class="form-control"
                value="{{ request.form['GapBetweenPACs'] }}"></input>
     </div>
-    
+    <!--Submit button-->
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Predict</button>
     </div>
