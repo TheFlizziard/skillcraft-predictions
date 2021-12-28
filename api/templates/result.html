@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{% block title %} Prediction result {% endblock %}</h1>
+<h3>Pred = {{res['pred']}}</h3>
+<h3>Score = {{res['score']}}</h3>
+
+{% endblock %}

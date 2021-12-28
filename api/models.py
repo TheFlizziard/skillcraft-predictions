@@ -5,6 +5,7 @@ import sklearn as sk
 from sklearn.ensemble import RandomForestClassifier
 
 def preprocessing():
+
     data = pd.read_csv("SkillCraft1_Dataset.csv")
     
     league_names = {1 : 'Bronze', 2 : 'Silver', 3 : 'Gold', 4 : 'Platinum',
@@ -16,6 +17,7 @@ def preprocessing():
     return data
 
 def clean_data(data):
+
     cols = data.columns.tolist()
     cols = cols[-1:] + cols[:-1]
     cols = [cols[1]] + [cols[0]] + cols[2:]

@@ -36,9 +36,15 @@ def prediction():
             data = preprocessing()
             print("preprocessing done")
             pred, score = model_important_features(data, input)
+
             print("pred done")
-            print(f'You have been predicted {pred} with a precision of {score}%')
+            print(f'You have been predicted {pred[0]} with a precision of {score}%')
             
-            return redirect(url_for('index'))
+            return redirect(url_for('result', score=score, pred=pred[0]))
 
     return render_template('prediction.html')
+
+@app.route('/prediction/result/<float:score>/<string:pred>')
+def result(score, pred):
+    res = {'score': score, 'pred': pred}
+    return render_template('result.html', res=res)
