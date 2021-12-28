@@ -1,58 +1,66 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% block title %} Make a new prediction {% endblock %}</h1>
+<h2>{% block title %} Make a new prediction {% endblock %}</h2>
 
 <form method="post">
-
     <!--Radio buttons for selecting features (important features only or all features)-->
-    <div>
-        <input type="radio" id="imp_features" name="features" value="imp_features" checked>
-        <label for="imp_features">Model on important features only</label>
-    </div>
-    <div>
-        <input type="radio" id="all_features" name="features" value="all_features">
-        <label for="all_features">Model on all features</label>
+    <div class="form-group">
+        <h4>Select the features option you want to try</h4>
+        <div>
+            <input type="radio" id="imp_features" name="features" value="imp_features" checked>
+            <label for="imp_features">Model on important features only</label>
+        </div>
+        <div>
+            <input type="radio" id="all_features" name="features" value="all_features">
+            <label for="all_features">Model on all features</label>
+        </div>
     </div>
     <!--Radio buttons for selecting the prediction type (rank prediction or group prediction)-->
-    <div>
-        <input type="radio" id="rank" name="rank" value="rank" checked>
-        <label for="rank">Model predicting ranks</label>
-    </div>
-    <div>
-        <input type="radio" id="group" name="rank" value="group">
-        <label for="group">Model predicting groups</label>
+    <div class="form-group">
+        <h4>Select the prediction type you want to try</h4>
+        <div>
+            <input type="radio" id="rank" name="rank" value="rank" checked>
+            <label for="rank">Model predicting ranks</label>
+        </div>
+        <div>
+            <input type="radio" id="group" name="rank" value="group">
+            <label for="group">Model predicting groups</label>
+        </div>
     </div>
     <!--Formulaire for collecting the user input data-->
+    <h4>Enter your ingame stats</h4>
     <div class="form-group">
-        <label for="APM">APM</label>
-        <input type="text" name="APM"
-               placeholder="ex: 143.7180" class="form-control"
-               value="{{ request.form['APM'] }}"></input>
-    </div>
-    <div class="form-group">
-        <label for="SelectByHotkeys">SelectByHotkeys</label>
-        <input type="text" name="SelectByHotkeys"
-               placeholder="ex: 0.003515" class="form-control"
-               value="{{ request.form['SelectByHotkeys'] }}"></input>
-    </div>
-    <div class="form-group">
-        <label for="AssignToHotkeys">AssignToHotkeys</label>
-        <input type="text" name="AssignToHotkeys"
-               placeholder="ex: 0.000220" class="form-control"
-               value="{{ request.form['AssignToHotkeys'] }}"></input>
-    </div>
-    <div class="form-group">
-        <label for="ActionLatency">ActionLatency</label>
-        <input type="text" name="ActionLatency"
-               placeholder="ex: 40.8673" class="form-control"
-               value="{{ request.form['ActionLatency'] }}"></input>
-    </div>
-    <div class="form-group">
-        <label for="GapBetweenPACs">GapBetweenPACs</label>
-        <input type="text" name="GapBetweenPACs"
-               placeholder="ex: 32.6677" class="form-control"
-               value="{{ request.form['GapBetweenPACs'] }}"></input>
+        <div class="form-group">
+            <label for="APM">APM:</label>
+            <input type="text" name="APM"
+                   placeholder="ex: 143.7180" class="form-control" size="10"
+                   value="{{ request.form['APM'] }}"></input>
+        </div>
+        <div class="form-group">
+            <label for="SelectByHotkeys">SelectByHotkeys:</label>
+            <input type="text" name="SelectByHotkeys"
+                   placeholder="ex: 0.003515" class="form-control" size="10"
+                   value="{{ request.form['SelectByHotkeys'] }}"></input>
+        </div>
+        <div class="form-group">
+            <label for="AssignToHotkeys">AssignToHotkeys:</label>
+            <input type="text" name="AssignToHotkeys"
+                   placeholder="ex: 0.000220" class="form-control" size="10"
+                   value="{{ request.form['AssignToHotkeys'] }}"></input>
+        </div>
+        <div class="form-group">
+            <label for="ActionLatency">ActionLatency:</label>
+            <input type="text" name="ActionLatency"
+                   placeholder="ex: 40.8673" class="form-control" size="10"
+                   value="{{ request.form['ActionLatency'] }}"></input>
+        </div>
+        <div class="form-group">
+            <label for="GapBetweenPACs">GapBetweenPACs:</label>
+            <input type="text" name="GapBetweenPACs"
+                   placeholder="ex: 32.6677" class="form-control" size="10"
+                   value="{{ request.form['GapBetweenPACs'] }}"></input>
+        </div>
     </div>
     <!--Submit button-->
     <div class="form-group">
