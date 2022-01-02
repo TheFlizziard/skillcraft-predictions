@@ -9,7 +9,7 @@ This project is an university project which constists of analyzing a given datas
 As a team of two students, we worked on a dataset that contains datas about players statistics on the famous game Starcraft II, developped by Blizzard Entertainment.
 The dataset is made of 3395 observations and 20 variables, where `LeagueIndex` is the label and other variables are features.
 
-This project is coded in Python 3.9.9 and is composed of a Jupyter Notebook file, with the detailed process and analysis explained in it, and a basic flask API to predict players rank.
+This project is coded in Python 3.9 and is composed of a Jupyter Notebook file, with the detailed process and analysis explained in it, and a basic flask API to predict players rank.
 
 ### Goal
 
@@ -20,7 +20,7 @@ Our dataset can be found here: https://archive.ics.uci.edu/ml/datasets/SkillCraf
 ### Requirements
 
 To run the code and see the result you will need:
-- Python 3.9.9
+- Python 3.9
 - Jupyter Notebook
 - flask
 
@@ -93,8 +93,8 @@ Our flask API is made of three HTML pages:
 - prediction HTML page: page that allows us to choose what kind of prediction we want and to put our in-game statistics
 - result HTML page: page that shows us our prediction rank based on the input we made in the prediction HTML page.
 
-![alt text](./images/by_apm.png?raw=true)
-
+![alt text](./images/prediction_html_page.png?raw=true)
+![alt text](./images/result_html_page.png?raw=true)
 
 
 ## Credits
