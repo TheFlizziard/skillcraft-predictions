@@ -63,17 +63,28 @@ Knowing that, we can ask ourselves if the leagues in this game are well deifned 
 
 ### How to use it
 
-To use the flask API and get your predicted rank, you should do as follows in the the project folder terminal:
+To use the flask API and get your predicted rank, you should do as follows in the the project folder:
+
+Bash:
 
 - export FLASK_APP=api/app
 - export FLASK_ENV=development
 - flask run
-- CTRL+C to stop 
 - Go to http://127.0.0.1:5000/
+
+Command prompt (CMD):
+
+- set FLASK_APP=api/app
+- set FLASK_ENV=development
+- flask run
+- Go to http://127.0.0.1:5000/
+
+
+Press CTRL+C to stop.
 
 Be sure to have flask installed on your computer first.
 
-### Result
+### HTML result
 
 ## PUT SOME IMAGES OF WEB PAGE
 Our flask API is made of three HTML pages:
@@ -81,6 +92,8 @@ Our flask API is made of three HTML pages:
 - index HTML page: welcome and introduction page 
 - prediction HTML page: page that allows us to choose what kind of prediction we want and to put our in-game statistics
 - result HTML page: page that shows us our prediction rank based on the input we made in the prediction HTML page.
+
+![alt text](https://github.com/TheFlizziard/skillcraft-predictions/images/by_apm.png?raw=true)
 
 
 
@@ -93,7 +106,7 @@ Team members:
 
 ## License
 
-This project 
+This project is under MIT License. See the LICENCE.txt file for more information.
 
 
 
