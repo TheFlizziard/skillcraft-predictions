@@ -51,6 +51,6 @@ def prediction():
 @app.route('/prediction/result/<float:score>/<string:pred>')
 def result(score, pred):
 
-    res = {'score': score, 'pred': pred}
+    res = {'score': round(score*100, 2), 'pred': pred}
 
     return render_template('result.html', res=res)

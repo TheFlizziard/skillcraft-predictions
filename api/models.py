@@ -109,11 +109,12 @@ def get_Y(data, rank):
     if rank:
         Y = data['LeagueName']
     else:
-        group3 = {'Bronze' : 'novice', 'Silver' : 'novice',
-          'Gold' : 'expert', 'Platinum' : 'expert', 'Diamond' : 'expert',
-          'Master' : 'pro', 'GrandMaster' : 'pro', 'Professional' : 'pro'}
-        data['Group3'] = data['LeagueName'].map(group3)
+        group = {'Bronze' : 'novice', 'Silver' : 'novice',
+          'Gold' : 'competent', 'Platinum' : 'competent', 
+          'Diamond' : 'expert', 'Master' : 'expert',
+          'GrandMaster' : 'pro', 'Professional' : 'pro'}
+        data['Group'] = data['LeagueName'].map(group)
 
-        Y = data['Group3']
+        Y = data['Group']
 
     return Y
