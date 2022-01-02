@@ -31,13 +31,40 @@ To be able to run the code on python, you will need to install the following Pyt
 - matplotlib
 - plotly
 
+## Result
+
+Here are the results of our models prediction on ranks:
+
+- KNN Classifier model : around 38%
+- SVC model: around 39%
+- LDA model: around 40%
+- Random Forest Classifier model: around 42%
+
+All these models have a low accuracy (around 40%) which is obviously not enough at all for a decent ranking prediction.
+
+Here are the results for the supervised learning over two, three and four rank groups:
+
+- Random Forest Classifier on 4 predefined groups: around 69%
+- Random Forest Classifier on 3 predefined groups: around 75%
+- Random Forest Classifier on 2 predefined groups: around 80%
+
+The accuracy for 3 and 4 groups are good and interesting, but the 2 grouping one is not interesting to study even if it has the highest score. Using the 4 groups model seems to be the best since the Gold leagues is not in the same group than the Diamond league and as player, we know there is a high gap of level and expertise between these two leagues.
+
+## Conclusion
+
+With our dataset, we can not predict exactly the rank of any Starcraft II players. Maybe because we need other features that can explained more the rank of a player or maybe because it's not possible with our knowledge to predict it precisely.
+
+However, with the data we have, we can try to get an idea of a player's level by grouping up the leagues together and forming new groups. 
+Knowing that, we can ask ourselves if the leagues in this game are well deifned or not. Some of them could be irrelevant because of the gap of level between players in the same league. We could maybe imagine another ranking system with more or less leagues. Another model of ranking could give us a better rank prediction model.
+
+
+
 ## flask API
 
 ### How to use it
 
 To use the flask API and get your predicted rank, you should do as follows in the the project folder terminal:
 
-### NEED MORE PRECISION
 - export FLASK_APP=api/app
 - export FLASK_ENV=development
 - flask run
@@ -67,4 +94,7 @@ Team members:
 ## License
 
 This project 
+
+
+
 
