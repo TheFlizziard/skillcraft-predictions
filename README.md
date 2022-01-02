@@ -1,6 +1,6 @@
 # skillcraft-predictions
 
-# Introduction
+## Introduction
 
 This project is an university project which constists of analyzing a given dataset and answer to a problematic.
 
@@ -8,13 +8,13 @@ As a team of two students, we worked on a dataset that contains datas about play
 
 This project is coded in Python 3.9.9 and is composed of a Jupyter Notebook file, with the detailed process and analysis, and a basic flask API to predict players rank.
 
-## Goal
+### Goal
 
 The goal of this project is to try to predict the rank of any Starcraft II players based on their statistics on the game.
 
 Our dataset can be found here: https://archive.ics.uci.edu/ml/datasets/SkillCraft1+Master+Table+Dataset
 
-## Librairies needed
+### Librairies needed
 
 To be able to run the code on python, you will need to install the following librairies:
 - numpy
@@ -28,9 +28,9 @@ To be able to run the code on python, you will need to install the following lib
 
 
 
-# flask API
+## flask API
 
-## How to use it
+### How to use it
 
 To use the flask API and get your predicted rank, you should do as follow in the the project folder:
 
@@ -42,7 +42,7 @@ To use the flask API and get your predicted rank, you should do as follow in the
 
 Be sure to have flask installed on your computer first.
 
-## Result
+### Result
 
 ## PUT SOME IMAGES OF WEB PAGE
 Our flask API is made of three HTML pages:
