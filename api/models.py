@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import sklearn as sk
 
+
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestClassifier
 
@@ -118,3 +119,15 @@ def get_Y(data, rank):
         Y = data['Group']
 
     return Y
+"""
+def save_graph(data, colname, value):
+
+    category_orders = {'LeagueName' : ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Master', 'GrandMaster', 'Professional']}
+
+    fig = px.box(data, x='LeagueName', y=colname, orientation='v', color='LeagueName',
+             title='Boxplot of the player\'s Hotkeys selections group by their league',
+             category_orders=category_orders)
+    fig.add_hline(y=value, line_width=2, line_dash="dash", line_color="red",
+                annotation_text="your" + colname, annotation_position="top left")
+    fig.write_image("static/images" + colname + ".png")
+"""

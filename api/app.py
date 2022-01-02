@@ -54,3 +54,7 @@ def result(score, pred):
     res = {'score': round(score*100, 2), 'pred': pred}
 
     return render_template('result.html', res=res)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
