@@ -93,8 +93,8 @@ Our flask API is made of three HTML pages:
 - prediction HTML page: page that allows us to choose what kind of prediction we want and to put our in-game statistics
 - result HTML page: page that shows us our prediction rank based on the input we made in the prediction HTML page.
 
-![alt text](./images/prediction_html_page.png?raw=true)
-![alt text](./images/result_html_page.png?raw=true)
+![alt text](./images/prediction_html_page.PNG?raw=true)
+![alt text](./images/result_html_page.PNG?raw=true)
 
 
 ## Credits
