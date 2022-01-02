@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{% block title %} Prediction result {% endblock %}</h2>
+<h5>Based on our data and on your ingame stats, you have a<span style="color:red;"> {{res['pred']}} </span>level.</h5>
+<h6>This prediction has a<span style="color:red;"> {{res['score']}} </span>% score of accuracy</h6>
+
+{% endblock %}
