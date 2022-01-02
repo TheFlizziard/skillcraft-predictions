@@ -2,3 +2,4 @@ api/__pycache__/app.cpython-39.pyc
 api/templates/prediction.html
 .DS_Store
 api/__pycache__/models.cpython-39.pyc
+.ipynb_checkpoints/.main-checkpoint.ipynb.icloud
